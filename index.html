@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+         crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+         crossorigin=""></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="container">
+        <div id="map"></div>
+        <section id="info">
+            <div class="glass details">
+                Details : Current Weather API
+            </div>
+            <div class="glass forecast">
+                Forecast : 3-hour Forecast 5 days
+            </div>
+            <div class="glass chart"> 
+                Chart : 3-hour Forecast 5 days
+            </div>
+        </section>
+    </section>
+
+
+</body>
+<script src="script.js" type="text/babel"></script>
+</html>

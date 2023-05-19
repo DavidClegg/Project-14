@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    background-color: #222;
+    color: #eee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+#container{
+    /* overflow: hidden; */
+    position:fixed;
+    display: grid;
+}
+#map{
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+#info{
+    justify-self: center;
+    width: 900px;
+    height: 100vh;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    color: black; 
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: 3fr 1fr 3fr;
+    grid-template-areas:
+    "Details Map Map"
+    "Forecast Chart Chart"
+    "Forecast Chart Chart";
+}
+.details {grid-area: Details;}
+.map {grid-area: Map;}
+.chart{grid-area: Chart;}
+.forecast{grid-area: Forecast;}
+.glass{     
+    background: rgba(184, 255, 251, 0.103);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(43, 43, 43, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+@media(max-width: 900px){
+    #container{
+        display: flex;
+    }
+    #info{
+        width: 100vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr 2fr;
+        grid-template-areas:
+        "Details Map"
+        "Forecast Map"
+        "Forecast Chart"
+        "Forecast Chart";
+    }
+    .glass{
+        margin: 1rem;
+    }
+}
+@media(max-width: 770px){
+    #info{
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "Map"
+        "Details"
+        "Chart"
+        "Forecast";
+    }
+}
+
+.details .date{
+
+}
+.details .location{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.details .tempurature{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.details .description{
+    text-transform: capitalize;
+}
+.details .weather{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-left: 3px solid red;
+    padding-left: 1rem;
+}
+
