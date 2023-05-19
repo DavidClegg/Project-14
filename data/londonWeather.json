@@ -1,0 +1,1 @@
+{"id":2643743,"name":"London","coord":{"lat":51.5085,"lon":-0.1257},"main":{"temp":286.39,"feels_like":285.68,"temp_min":284.57,"temp_max":287.21,"pressure":1028,"humidity":73},"dt":1684526956,"wind":{"speed":4.12,"deg":90},"sys":{"country":"GB"},"rain":null,"snow":null,"clouds":{"all":40},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03n"}]}

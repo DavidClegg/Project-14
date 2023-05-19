@@ -1,0 +1,1 @@
+{"id":745042,"name":"İstanbul","coord":{"lat":41.0351,"lon":28.9833},"main":{"temp":288.6,"feels_like":288.34,"temp_min":287.24,"temp_max":288.83,"pressure":1014,"humidity":82},"dt":1684530547,"wind":{"speed":2.06,"deg":320},"sys":{"country":"TR"},"rain":null,"snow":null,"clouds":{"all":75},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04n"}]}

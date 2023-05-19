@@ -1,0 +1,1 @@
+{"id":3369157,"name":"Cape Town","coord":{"lat":-33.9258,"lon":18.4232},"main":{"temp":286.38,"feels_like":285.64,"temp_min":283.76,"temp_max":289.47,"pressure":1021,"humidity":72},"dt":1684530560,"wind":{"speed":0.89,"deg":326},"sys":{"country":"ZA"},"rain":null,"snow":null,"clouds":{"all":72},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04n"}]}

@@ -1,0 +1,1 @@
+{"id":5368361,"name":"Los Angeles","coord":{"lat":34.0522,"lon":-118.2437},"main":{"temp":292.03,"feels_like":292.01,"temp_min":287.29,"temp_max":299.68,"pressure":1018,"humidity":78},"dt":1684530565,"wind":{"speed":4.12,"deg":230},"sys":{"country":"US"},"rain":null,"snow":null,"clouds":{"all":100},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50d"}]}

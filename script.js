@@ -1,9 +1,69 @@
-let exampleWeather;
-fetch("./data/exampleWeather.json")
+let locations = [
+    "./data/exampleWeather.json",
+    "./data/newyorkWeather.json",
+    "./data/londonWeather.json",
+    "./data/parisWeather.json",
+    "./data/laWeather.json",
+
+    "./data/istanbulWeather.json",
+    "./data/kairoWeather.json",
+    "./data/beijingWeather.json",
+    "./data/tokyoWeather.json",
+    "./data/mumbaiWeather.json",
+    
+    "./data/sidneyWeather.json",
+    "./data/johannesburgWeather.json",
+    "./data/timbuktuWeather.json",
+    "./data/marrakechWeather.json",
+    "./data/capetownWeather.json",
+    "./data/rioWeather.json",
+    "./data/kualalumpurWeather.json",
+
+]
+
+let savedLocation;
+
+function randomLocation(){
+    // This should fetch the json from the data file
+    let location = locations[Math.floor(Math.random() * locations.length)]
+    fetch(location)
     .then(response => response.json())
-    .then(json => exampleWeather = json)
-    .then(()=>
-        detailRoot.render(<Details weather={exampleWeather}/>));
+    .then(json => getLocation(json));
+}
+function userLocation(){
+    // This one needs user permission
+    // It needs to cache the result
+    // And it needs to fetch
+    function success(info){
+        console.log(info)
+        let {latitude, longitude} = info.coords;
+        // check for variable
+        if(savedLocation != null){
+            getLocation(savedLocation);
+        } 
+        else {
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=c9932814857895696762b06f2a6df651`)
+            .then(response => response.json())
+            .then(json => {
+                getLocation(json);
+                savedLocation = json;
+            })
+        }
+    }
+
+    function error(){
+        alert("Unable to get Geolocation data. Try explore instead.")   
+    }
+
+    navigator.geolocation.getCurrentPosition(success, error);
+}
+function getLocation(json){
+    // This should be the json-handling function
+    detailRoot.render(<Details weather={json}/>);
+        map.setView([json.coord.lat, json.coord.lon - 0.03], 13)
+}
+
+randomLocation()
 
 let degrees = "°"
 let icon = new Map([
@@ -20,7 +80,6 @@ let icon = new Map([
     ["sun","☀"],
     ["frost","❄"],
 ])
-
 // for( let [key,value] of icon){document.querySelector(".icons").innerHTML += `${key}: ${value} | ` }//
 
 // let coords = [51.5, -0.1];
@@ -128,14 +187,11 @@ const dateEnd = dateNumber =>{
 const DateWidget = props => (<div className="date">{new Intl.DateTimeFormat(props.locale, {month: "long"}).format(props.date)} {dateEnd(new Intl.DateTimeFormat(props.locale, {day: "numeric"}).format(props.date))}, {new Intl.DateTimeFormat(props.locale, {hour:"numeric", minute:"numeric", dayPeriod: "short"}).format(props.date)}</div>);
 const LocationWidget = ({name, country}) => (<div className="location"> {name}, {country}</div>);
 
-const Description = props => (<div className="description">{props.feels + degrees + props.format}. {props.clouds}. {props.wind}.</div>);
+const Description = props => (<div className="description">Feels like {props.feels + degrees + props.format}. {props.clouds}. {props.wind}.</div>);
 const Weather = props => (<div className="weather">
-    <div>{props.wind}</div>
-    <div>{props.pressure}</div>
-    <div>{props.humidity}</div>
-    <div>{props.uv}</div>
-    <div>{props.dew}</div>
-    <div>{props.visibility}</div>
+    <div>{props.wind}m/s wind</div>
+    <div>{props.pressure}hPa</div>
+    <div>Humidity: {props.humidity}%</div>
 </div>);
 
 const Tempurature = props => (<div className="tempurature" onClick={props.onTempClick}><img src={props.icon}/>{props.tempurature + degrees + props.format}</div>
@@ -152,23 +208,22 @@ function Details(props){
     console.log({name, visibility, country, icon, description, humidity, pressure
     , temp, feels_like, speed,deg})
 
-
-    function changeTempFormat (oldFormat){
+    function changeTempFormat(oldFormat){
         format = {
             "C" : "F",
             "F" : "K",
             "K" : "C"
         }[oldFormat]
-        console.log(format)
         setTemp(formatTempurature(temp));
         setFeels(formatTempurature(feels_like));
         return;
     };
+
     const formatTempurature = k => {
         let t = k * 100;
         let newT = format == "C" ? parseFloat(t) -27515 :
         format == "F" ? ((parseFloat(t) -27515) * 1.8) + 3200 : t;
-        return parseInt(newT) / 100;
+        return parseInt(newT/100) // 100;
     }
 
     let [newTemp, setTemp] = React.useState(formatTempurature(temp));
@@ -179,7 +234,7 @@ function Details(props){
         <LocationWidget name={name} country={country}/>
         <Tempurature icon={iconUrl(icon)} tempurature={newTemp} onTempClick={()=>changeTempFormat(format)} format={format}/>
         <Description feels={newFeels} format={format} clouds={description} wind={beaufortScale(speed)}/>
-        <Weather wind={speed} pressure={pressure} humidity={humidity} uv={"uv"} dew={"dew"} visibility={visibility}/>
+        <Weather wind={speed} pressure={pressure} humidity={humidity} uv={"uv"} dew={"dew"} visibility={(visibility || 10000) /1000}/>
     </>
 }
 

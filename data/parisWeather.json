@@ -1,0 +1,1 @@
+{"id":2988507,"name":"Paris","coord":{"lat":48.8534,"lon":2.3488},"main":{"temp":289.61,"feels_like":288.7,"temp_min":287.49,"temp_max":290.45,"pressure":1021,"humidity":53},"dt":1684526956,"wind":{"speed":4.63,"deg":20},"sys":{"country":"FR"},"rain":null,"snow":null,"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}]}

@@ -1,0 +1,1 @@
+{"id":1275339,"name":"Mumbai","coord":{"lat":19.0144,"lon":72.8479},"main":{"temp":303.14,"feels_like":310.14,"temp_min":303.14,"temp_max":303.14,"pressure":1009,"humidity":79},"dt":1684530551,"wind":{"speed":2.57,"deg":300},"sys":{"country":"IN"},"rain":null,"snow":null,"clouds":{"all":40},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}]}

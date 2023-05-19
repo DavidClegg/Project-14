@@ -1,0 +1,1 @@
+{"id":2147714,"name":"Sydney","coord":{"lat":-33.8679,"lon":151.2073},"main":{"temp":280.21,"feels_like":277.23,"temp_min":276.27,"temp_max":283.5,"pressure":1016,"humidity":75},"dt":1684530545,"wind":{"speed":4.63,"deg":300},"sys":{"country":"AU"},"rain":null,"snow":null,"clouds":{"all":20},"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02d"}]}

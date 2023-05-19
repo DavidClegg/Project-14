@@ -1,0 +1,42 @@
+{
+    "id":5128581,
+    "name":"New York City",
+    "coord":
+        {
+            "lat":40.7143,
+            "lon":-74.006
+            },
+    "main":
+        {
+            "temp":292.87,
+            "feels_like":292.28,
+            "temp_min":289.79,
+            "temp_max":296.31,
+            "pressure":1025,
+            "humidity":53
+        },
+        "dt":1684527291,
+        "wind":
+            {
+                "speed":12.07,
+                "deg":151
+            },
+        "sys":
+            {
+                "country":"US"
+            },
+        "rain":null,
+        "snow":null,
+        "clouds":
+            {
+                "all":0
+            },
+        "weather":[
+            {
+                "id":800,
+                "main":"Clear",
+                "description":"clear sky",
+                "icon":"01d"
+            }
+        ]
+}

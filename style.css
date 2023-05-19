@@ -31,13 +31,13 @@ html{
     grid-template-rows: 3fr 1fr 3fr;
     grid-template-areas:
     "Details Map Map"
-    "Forecast Chart Chart"
-    "Forecast Chart Chart";
+    "Buttons Chart Chart"
+    "Buttons Chart Chart";
 }
 .details {grid-area: Details;}
 .map {grid-area: Map;}
 .chart{grid-area: Chart;}
-.forecast{grid-area: Forecast;}
+.buttons{grid-area: Buttons;}
 .glass{     
     background: rgba(184, 255, 251, 0.103);
     backdrop-filter: blur(10px);
@@ -57,9 +57,9 @@ html{
         grid-template-rows: 2fr 1fr 1fr 2fr;
         grid-template-areas:
         "Details Map"
-        "Forecast Map"
-        "Forecast Chart"
-        "Forecast Chart";
+        "Buttons Map"
+        "Buttons Chart"
+        "Buttons Chart";
     }
     .glass{
         margin: 1rem;
@@ -73,7 +73,7 @@ html{
         "Map"
         "Details"
         "Chart"
-        "Forecast";
+        "Buttons";
     }
 }
 
@@ -87,16 +87,38 @@ html{
 .details .tempurature{
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
+    font-weight: 500;
 }
 .details .description{
     text-transform: capitalize;
+    font-weight: 700;
+    padding-bottom: 1rem;
 }
 .details .weather{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-left: 3px solid red;
+    border-left: 3px solid #ec6e4c;
     padding-left: 1rem;
 }
 
+.buttons{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+}
+.buttons > button{
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.buttons > button:hover{
+    background: rgb(203, 215, 228);
+}
+.buttons > button > img{
+    padding-bottom: 1rem;
+}

@@ -1,0 +1,1 @@
+{"id":3451190,"name":"Rio de Janeiro","coord":{"lat":-22.9028,"lon":-43.2075},"main":{"temp":295.13,"feels_like":294.95,"temp_min":295.13,"temp_max":296.45,"pressure":1019,"humidity":60},"dt":1684530547,"wind":{"speed":4.12,"deg":170},"sys":{"country":"BR"},"rain":null,"snow":null,"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}]}

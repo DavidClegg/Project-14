@@ -1,0 +1,1 @@
+{"id":360630,"name":"Cairo","coord":{"lat":30.0626,"lon":31.2497},"main":{"temp":294.57,"feels_like":294.33,"temp_min":293.94,"temp_max":294.57,"pressure":1014,"humidity":60},"dt":1684530545,"wind":{"speed":3.09,"deg":360},"sys":{"country":"EG"},"rain":null,"snow":null,"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}]}

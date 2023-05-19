@@ -1,0 +1,1 @@
+{"id":993800,"name":"Johannesburg","coord":{"lat":-26.2023,"lon":28.0436},"main":{"temp":281.08,"feels_like":281.08,"temp_min":280.82,"temp_max":283.01,"pressure":1018,"humidity":58},"dt":1684530548,"wind":{"speed":0.45,"deg":102},"sys":{"country":"ZA"},"rain":null,"snow":null,"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}]}

@@ -1,0 +1,1 @@
+{"id":2542997,"name":"Marrakesh","coord":{"lat":31.6315,"lon":-8.0083},"main":{"temp":296.19,"feels_like":295.36,"temp_min":296.19,"temp_max":296.19,"pressure":1015,"humidity":31},"dt":1684530557,"wind":{"speed":2.06,"deg":60},"sys":{"country":"MA"},"rain":null,"snow":null,"clouds":{"all":20},"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02n"}]}
